@@ -2,12 +2,12 @@ import home from '../page/home';
 import user from '../page/user';
 const routes = [
   {
-    component: home,
-    path: '/home'
+    path: '/home',
+    component: home
   },
   {
-    component: user,
-    path: '/user'
+    path: '/user',
+    component: user
   }
 ];
 
