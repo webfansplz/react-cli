@@ -7,6 +7,8 @@ module.exports = {
     proxyTable: {}
   },
   build: {
-    staticPath: 'static'
+    staticPath: 'static',
+    publicPath: '/',
+    devtoolType: 'source-map'
   }
 };
