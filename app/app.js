@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App c">
+      <div className="App">
         <img className="App-logo" src={logo} alt="logo" />
         <h1>Welcome to React-cli!</h1>
       </div>

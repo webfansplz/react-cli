@@ -116,10 +116,10 @@ const devConf = merge(baseConf, {
         const filename = error.file.split('!').pop();
         //编译出错时,右下角弹出错误提示！
         notifier.notify({
-          title: 'xc-cli',
+          title: 'react-cli',
           message: severity + ': ' + error.name,
           subtitle: filename || '',
-          icon: path.join(__dirname, 'xc-cli.png')
+          icon: path.join(__dirname, 'err.png')
         });
       }
     })
