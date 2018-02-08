@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import data from './store/reducers';
-import logo from './logo.svg';
+import thunk from 'redux-thunk';
+import reducer from './store';
 import './index.css';
-import './App.css';
 import Index from './page';
-const store = createStore(data);
+const store = createStore(reducer, applyMiddleware(thunk));
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <img src={logo} className="App-logo" />
-          <Index />
-        </div>
+        <Index />
       </Provider>
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

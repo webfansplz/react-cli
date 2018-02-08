@@ -13,7 +13,12 @@ module.exports = {
   entry: path.resolve(__dirname, '../app/app.js'),
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
-    alias: {}
+    alias: {
+      actionTypes: resolve('app/store/actionTypes.js'),
+      actions: resolve('app/store/actions'),
+      reducers: resolve('app/store/reducers'),
+      services: resolve('app/store/services')
+    }
   },
   module: {
     rules: [
